@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use(session({
-  secret: "This Secrets Shop Site Can Only Be Hacked By Akshat",
+  secret: "***",
   resave: false,
   saveUninitialized: false
 }));
@@ -28,7 +28,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // assign mongoose promise library and connect to database
-mongoose.connect('mongodb+srv://Akshat:Akshat9998@secrets-shop-pdphl.mongodb.net/test?retryWrites=true&w=majority', {
+mongoose.connect('***', {
 	useNewUrlParser: true,
 	useCreateIndex: true
 }).then(() => {
@@ -183,5 +183,5 @@ app.post("/login", function(req, res){
 
 
 app.listen(process.env.PORT, process.env.IP, function(){
-  console.log("The Secrets Site Server Has Started"); 
+  console.log("The Secrets Shop Site Server Has Started"); 
 });
